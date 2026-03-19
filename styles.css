@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+
+h1{
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#myCanvas{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(114, 245, 141);
+}
