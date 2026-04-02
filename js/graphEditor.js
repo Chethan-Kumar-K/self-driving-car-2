@@ -23,8 +23,8 @@ class GraphEditor {
         this.mouse = new Point(evt.offsetX, evt.offsetY);
         this.hovered = getNearestPoint(this.mouse, this.graph.points, 10);
         if (this.dragging == true){
-            this.selected.x = mouse.x;
-            this.selected.y = mouse.y;
+            this.selected.x = this.mouse.x;
+            this.selected.y = this.mouse.y;
         }
     }
 
@@ -70,7 +70,7 @@ class GraphEditor {
         }
         if (this.selected){
             const intent = this.hovered ? this.hovered : this.mouse;
-            new Segment(this.selected, intent).draw(ctx, { dash: [3, 3] });
+            new Segment(this.selected, intent).draw(this.ctx, { dash: [3, 3] });
             this.selected.draw(this.ctx, { outline: true });
         }
     }
